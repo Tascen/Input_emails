@@ -8,5 +8,5 @@ import {Emails_input} from './сomponents/inputs/inputs'
 
 
 
-let Emails_input_component = new Emails_input("Share <strong>Board name</strong> with others")
+let Emails_input_component = Emails_input("Share <strong>Board name</strong> with others")
 document.querySelector("#root").appendChild(Emails_input_component)
