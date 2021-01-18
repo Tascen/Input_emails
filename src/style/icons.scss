@@ -1,0 +1,11 @@
+*[class|="icon"], .icon {
+  --color_1: var(--color_topography-warn);
+  --transition: all .25s ease;
+  svg * {transition: var(--transition);}
+}
+
+.icon-cross {
+  --size: 8px;
+  width: var(--size);
+  height: var(--size);
+}

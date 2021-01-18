@@ -1,0 +1,43 @@
+
+
+@mixin body_H4-normal {
+  @include body_H4-normal-1;
+}
+
+@mixin body_H4-normal-1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0px;
+}
+
+@mixin body-normal {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128%;//18
+  letter-spacing: 0px;
+}
+
+@mixin body-small {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+
+
+@mixin input_normal {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128%;//18
+  letter-spacing: 0px;
+}

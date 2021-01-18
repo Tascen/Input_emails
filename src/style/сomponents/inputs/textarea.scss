@@ -1,0 +1,40 @@
+@import "@styles/topography/mixins";
+
+$placeholder_transition_duration: .25s;
+
+
+textarea, .textarea {
+  min-height: 96px;
+  margin: 24px 0;
+  padding: 8px 0px 0px 8px;
+  border-radius: $border_radius_small;
+  resize: vertical;
+  overflow-x: hidden;
+  @include body-normal;
+  &::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 3px;
+  }
+  .text_block {
+    margin: 0 8px 8px 0;
+  }
+
+
+
+  &::after {
+    content: attr(data-placeholder); padding: 0 0 0 8px; //  word space: 8px
+    display: inline-block;
+    @include body-normal;
+    color: var(--color_topography-avoid);
+    transition: all $placeholder_transition_duration ease;
+  }
+
+
+  &:focus {
+    outline: none !important;
+    &::after {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+  }
+}

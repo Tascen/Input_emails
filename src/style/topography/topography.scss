@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import "./mixins.scss";
+
+:root {
+  color: var(--color_topography_1);
+}
+
+
+strong {font-weight: 700;}
+h4 {
+  @include body_H4-normal;
+}
+
+p, a {
+  @include body-normal;
+  text-decoration: none;
+}
+
+input, textarea, button, label, select {
+  @include input_normal;
+}

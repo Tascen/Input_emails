@@ -1,0 +1,54 @@
+@import "@styles/topography/mixins";
+@import "@styles/variables";
+
+
+$transition_duration: .25s;
+
+.btn, input[type="button"], input[type="reset"], input[type="submit"], button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: none;
+
+  background: var(--color_panel_background-warn);
+  color: var(--color_topography-main-invert);
+  padding: 11px 16px;
+  border-radius: $border_radius_main;
+
+
+
+  transition: all $transition_duration ease;
+  &:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px 0px var(--box_shadow-warn);
+  }
+  &:active {
+    transition: none !important;
+    animation: shadow_transition_inset $transition_duration ease forwards;
+    -webkit-animation: shadow_transition_inset $transition_duration ease forwards;
+  }
+}
+
+
+
+@keyframes shadow_transition_inset {
+  0% {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0px 0px var(--box_shadow-warn);
+  }
+  50% {
+    transform: translate(0px, 0px);
+    box-shadow: 0px 0px 0px 0px var(--box_shadow-warn);
+  }
+  51% {
+    box-shadow: inset 0px 0px 0px 0px var(--box_shadow-warn);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    box-shadow: inset 3px 3px 0px 0px var(--box_shadow-warn);
+  }
+}

@@ -1,0 +1,32 @@
+@import "@styles/topography/mixins";
+@import "@styles/variables";
+
+.text_block {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: $border_radius_full;
+  background: var(--color_panel_background-warn-tr);
+  @include body-normal;
+  color: var(--color_topography-main);
+  user-select: none;
+
+
+  .icon-cross, {
+    cursor: pointer;
+    --color_1: currentColor;
+    --size: 8px;
+    margin: -1px 0 0 6px;
+  }
+
+
+
+  &.warn {
+    background: transparent !important;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      border-bottom: dashed 1px var(--color_topography-warn);
+    }
+  }
+}
